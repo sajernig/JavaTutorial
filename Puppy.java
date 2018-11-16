@@ -19,6 +19,15 @@ public class Puppy extends Dog {
 	  
 	  myPuppy.setAge( 2 );
 	  int pupAge = myPuppy.getAge();
+	  boolean bLaysEggs = myPuppy.laysEggs();
+	  if (bLaysEggs)
+	  {
+	     System.out.println("Puppys lay eggs" );	  
+	  }
+	  else
+	  {
+	     System.out.println("Puppys DO NOT lay eggs" );		  
+	  }
 	  myPuppy.barking();
 	  myPuppy.hungry();
 	  myPuppy.sleeping();
