@@ -1,4 +1,11 @@
-public class Dog {
+
+class Mammal {
+	boolean laysEggs() {
+		return(false);
+	}
+}
+
+public class Dog extends Mammal {
    String breed;
    int age;
    String color;
