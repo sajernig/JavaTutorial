@@ -6,6 +6,7 @@ class Mammal {
 }
 
 public class Dog extends Mammal {
+   private
    String breed;
    int age;
    String color;
