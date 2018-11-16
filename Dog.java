@@ -11,7 +11,7 @@ public class Dog extends Mammal {
    String color;
 
    public Dog() {
-	   age = 1;
+	   age = 2;
    }
 
    void barking() {
