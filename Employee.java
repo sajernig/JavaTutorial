@@ -2,7 +2,7 @@ import java.io.*;
 public class Employee {
 
    // DEPARTMENT is a constant
-   public static final String DEPARTMENT = "Development & Test: ";
+   public static final String DEPARTMENT = "Development: ";
    
    // this instance variable is visible for any child class.
    public String name;
