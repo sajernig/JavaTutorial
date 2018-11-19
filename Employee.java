@@ -1,10 +1,17 @@
 import java.io.*;
 public class Employee {
 
-   String name;
-   int age;
-   String designation;
-   double salary;
+   // DEPARTMENT is a constant
+   public static final String DEPARTMENT = "Development: ";
+   
+   // this instance variable is visible for any child class.
+   public String name;
+
+   // salary  variable is visible in Employee class only.
+   private double salary;
+   
+   private int age;
+   private String designation;
 
    // This is the constructor of the class Employee
    public Employee(String name) {
@@ -30,7 +37,7 @@ public class Employee {
    public void printEmployee() {
       System.out.println("Name:"+ name );
       System.out.println("Age:" + age );
-      System.out.println("Designation:" + designation );
+      System.out.println(DEPARTMENT + designation );
       System.out.println("Salary:" + salary);
    }
 }
