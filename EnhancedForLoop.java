@@ -14,5 +14,9 @@ public class EnhancedForLoop {
          System.out.print( name );
          System.out.print(",");
       }
+	  
+	  Double boxedDouble = 9.5;
+	  System.out.println( "\n\nboxedDouble to string = " + boxedDouble.toString());
+	  System.out.println( "\n\nRandon number = " + Math.random() );
    }
 }
