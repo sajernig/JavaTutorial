@@ -5,10 +5,16 @@ public class BitSetDemo
   {
 	  String bitSetString = "";
 	  BitSet localBitSet;
+	  int numberOfBits = 0;
 	  
 	  public void setBitSet(BitSet value)
 	  {
-		  localBitSet = value;
+		  this.localBitSet = value;
+	  }
+	  
+	  public void setNumberOfBits(int value )
+	  {
+		  this.numberOfBits = value;
 	  }
 	  
 	  public String ConvertBitSet()
@@ -17,7 +23,7 @@ public class BitSetDemo
 	      // Construct a string to hold the binary BitSet.
 	      //
 		  bitSetString = "";
-	      for (int i = 0; i < localBitSet.length()+1; i++)
+	      for (int i = 0; i < this.numberOfBits; i++)
 	      {
 		      if (localBitSet.get(i))
 		      {
@@ -32,7 +38,6 @@ public class BitSetDemo
 	     }
 	}
 	
-  
   public static void main(String args[]) 
   {
       BitSet bits1 = new BitSet(16);
@@ -50,6 +55,7 @@ public class BitSetDemo
 	  // Construct a string to hold the binary BitSet.
 	  //
 	  convertToString.setBitSet(bits1);
+	  convertToString.setNumberOfBits(16);
 	  String bitString = convertToString.ConvertBitSet();
 	  System.out.println("bitString = " + bitString);
 	  
@@ -65,6 +71,7 @@ public class BitSetDemo
 	  //
 	  BitSet firstByte = bits1.get(0, 3);
 	  convertToString.setBitSet(firstByte);
+	  convertToString.setNumberOfBits(4);
 	  bitString = convertToString.ConvertBitSet();
 	  System.out.println("first byte = " + bitString);
 	  
