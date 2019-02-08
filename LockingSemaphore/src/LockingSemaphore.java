@@ -24,15 +24,30 @@ public class LockingSemaphore
 
   public synchronized void take() throws InterruptedException
   {
-    while(this.signals == bound) wait();
-    this.signals++;
+    while(this.getSignals() == getBound()) wait();
+    this.setSignals(this.getSignals() + 1);
     this.notify();
   }
 
   public synchronized void release() throws InterruptedException
   {
-    while(this.signals == 0) wait();
-    this.signals--;
+    while(this.getSignals() == 0) wait();
+    this.setSignals(this.getSignals() - 1);
     this.notify();
+  }
+
+  public int getSignals()
+  {
+    return signals;
+  }
+
+  public void setSignals(int signals)
+  {
+    this.signals = signals;
+  }
+
+  public int getBound()
+  {
+    return bound;
   }
 }
